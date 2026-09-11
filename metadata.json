@@ -1,0 +1,6 @@
+{
+  "name": "Premium Virtual Number Marketplace",
+  "description": "Telegram Virtual Number Marketplace bot with Whop payments, seller listings, and FastAPI webhook server.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

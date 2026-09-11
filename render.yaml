@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: premium-virtual-number-marketplace
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "pip install --upgrade pip && pip install -r requirements.txt"
+    startCommand: "uvicorn app:app --host 0.0.0.0 --port $PORT"
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
+      - key: WHOP_API_KEY
+        sync: false
+      - key: WHOP_WEBHOOK_SECRET
+        sync: false
+      - key: WHOP_COMPANY_ID
+        value: ""
+      - key: DATABASE_URL
+        value: sqlite:///marketplace.db
+      - key: PORT
+        value: 10000
+      - key: SUPPORT_USERNAME
+        sync: false
